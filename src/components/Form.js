@@ -21,7 +21,7 @@ export default class Form extends React.Component{
             <form method="GET">
                 <input
                     className="form-control"
-                    name={this.state.name}
+                    name="name"
                     value={this.state.name}
                     onChange={e => this.change(e)}
                 />
