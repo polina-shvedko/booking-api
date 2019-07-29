@@ -26,32 +26,32 @@ export default class Form extends React.Component {
                 <div className="row">
                     <div className="col-6">
                         <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-3 col-form-label">Abfahrt von:</label>
-                            <div className="col-9">
+                            <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
+                            <div className="col-8">
                                 <input id="abfahrt" type="text" className="form-control" name="abfahrt" value={this.state.abfahrt} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-3 col-form-label">Ankunft zu:</label>
-                            <div className="col-9">
+                            <label htmlFor="abfahrt" className="col-4 col-form-label">Ankunft zu:</label>
+                            <div className="col-8">
                                 <input id="ankunft" type="text" className="form-control" name="ankunft" value={this.state.ankunft} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="form-group row">
-                            <label htmlFor="tagAbfahrt" className="col-3 col-form-label">Tag des Abfahrts</label>
-                            <div className="col-9">
+                            <label htmlFor="tagAbfahrt" className="col-4 col-form-label">Tag des Abfahrts</label>
+                            <div className="col-8">
                                 <input id="tagAbfahrt" type="text" className="form-control" name="tagAbfahrt" value={this.state.tagAbfahrt} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="form-group row">
-                            <label htmlFor="numReisenden" className="col-3 col-form-label">Nummer der Reisenden</label>
-                            <div className="col-9">
+                            <label htmlFor="numReisenden" className="col-4 col-form-label">Nummer der Reisenden</label>
+                            <div className="col-8">
                                 <input id="numReisenden" type="text" className="form-control" name="numReisenden" value={this.state.numReisenden} onChange={e => this.change(e)}/>
                             </div>
                         </div>
@@ -60,8 +60,8 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <div className="col-6">
                                 <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="direct" name="direct" value={this.state.direct} onChange={e => this.change(e)}/>
-                                    <label className="form-check-label" htmlFor="direct">Direct Flüg</label>
+                                    <input className="form-check-input" type="checkbox" id="isDirect" name="direct" value={this.state.isDirect} onChange={e => this.change(e)}/>
+                                    <label className="form-check-label" htmlFor="isDirect">Direct Flüg</label>
                                 </div>
                             </div>
                             <div className="col-6 text-right">
