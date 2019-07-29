@@ -6,6 +6,10 @@ export default class Result extends React.Component {
     };
 
     render() {
-        return ();
+        return (
+            <div className="row result">
+
+            </div>
+        );
     }
 }
