@@ -1,0 +1,1800 @@
+{
+  "ScheduleResource": {
+    "Schedule": [{
+      "TotalJourney": {
+        "Duration": "PT11H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T06:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 92
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "WZ",
+          "FlightNumber": 5273
+        },
+        "OperatingCarrier": {
+          "AirlineID": "5N"
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT11H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T06:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 92
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "5N",
+          "FlightNumber": 273
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 124,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT13H30M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T06:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 92
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:45"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T20:45"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "S7",
+          "FlightNumber": 1151
+        },
+        "Equipment": {
+          "AircraftCode": 319
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT14H15M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T06:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 92
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 134,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:45"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2564
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 134,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T19:00"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T21:30"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "H1",
+          "FlightNumber": 1472
+        },
+        "OperatingCarrier": {
+          "AirlineID": "DP"
+        },
+        "Equipment": {
+          "AircraftCode": 737
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 134,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT17H40M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T06:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 92
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "SVO",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T22:55"
+          },
+          "Terminal": {
+            "Name": "D"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-03T00:55"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "SU",
+          "FlightNumber": 6193
+        },
+        "OperatingCarrier": {
+          "AirlineID": "FV"
+        },
+        "Equipment": {
+          "AircraftCode": "73H"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT10H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 94
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "WZ",
+          "FlightNumber": 5273
+        },
+        "OperatingCarrier": {
+          "AirlineID": "5N"
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT10H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 94
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "5N",
+          "FlightNumber": 273
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT12H30M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 94
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:45"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T20:45"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "S7",
+          "FlightNumber": 1151
+        },
+        "Equipment": {
+          "AircraftCode": 319
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT13H15M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 94
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-12"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:45"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2564
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-12"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T19:00"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T21:30"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "H1",
+          "FlightNumber": 1472
+        },
+        "OperatingCarrier": {
+          "AirlineID": "DP"
+        },
+        "Equipment": {
+          "AircraftCode": 737
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13456,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-12"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT16H40M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T07:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 94
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "SVO",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T22:55"
+          },
+          "Terminal": {
+            "Name": "D"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-03T00:55"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "SU",
+          "FlightNumber": 6193
+        },
+        "OperatingCarrier": {
+          "AirlineID": "FV"
+        },
+        "Equipment": {
+          "AircraftCode": "73H"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123456,
+          "DatePeriod": {
+            "Effective": "2019-08-30",
+            "Expiration": "2019-09-17"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT9H45M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:05"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:15"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 1444
+        },
+        "Equipment": {
+          "AircraftCode": "32A"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-27",
+            "Expiration": "2019-09-20"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "5N",
+          "FlightNumber": 273
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-27",
+            "Expiration": "2019-09-20"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT9H45M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:05"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:15"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 1444
+        },
+        "Equipment": {
+          "AircraftCode": "32A"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-27",
+            "Expiration": "2019-09-20"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "WZ",
+          "FlightNumber": 5273
+        },
+        "OperatingCarrier": {
+          "AirlineID": "5N"
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-08-27",
+            "Expiration": "2019-09-20"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT11H5M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:05"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:15"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 1444
+        },
+        "Equipment": {
+          "AircraftCode": "32A"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 135,
+          "DatePeriod": {
+            "Effective": "2019-08-28",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "VKO",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:20"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T20:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "H1",
+          "FlightNumber": 1370
+        },
+        "OperatingCarrier": {
+          "AirlineID": "DP"
+        },
+        "Equipment": {
+          "AircraftCode": 737
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 135,
+          "DatePeriod": {
+            "Effective": "2019-08-28",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT11H40M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:05"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:15"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 1444
+        },
+        "Equipment": {
+          "AircraftCode": "32A"
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234567,
+          "DatePeriod": {
+            "Effective": "2019-09-01",
+            "Expiration": "2019-09-14"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:45"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T20:45"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "S7",
+          "FlightNumber": 1151
+        },
+        "Equipment": {
+          "AircraftCode": 319
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1234567,
+          "DatePeriod": {
+            "Effective": "2019-09-01",
+            "Expiration": "2019-09-14"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT9H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T09:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 96
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "WZ",
+          "FlightNumber": 5273
+        },
+        "OperatingCarrier": {
+          "AirlineID": "5N"
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT9H35M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T09:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 96
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T16:55"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:50"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "5N",
+          "FlightNumber": 273
+        },
+        "Equipment": {
+          "AircraftCode": 738
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 1245,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT11H30M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T09:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 96
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T11:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:10"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2528
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "DME",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T18:45"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T20:45"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "S7",
+          "FlightNumber": 1151
+        },
+        "Equipment": {
+          "AircraftCode": 319
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 123457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-13"
+          }
+        }
+      }]
+    }, {
+      "TotalJourney": {
+        "Duration": "PT12H15M"
+      },
+      "Flight": [{
+        "Departure": {
+          "AirportCode": "FRA",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T08:15"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "Arrival": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T09:10"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 96
+        },
+        "Equipment": {
+          "AircraftCode": 321
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "MUC",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T12:05"
+          },
+          "Terminal": {
+            "Name": 2
+          }
+        },
+        "Arrival": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T15:45"
+          },
+          "Terminal": {
+            "Name": 1
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "LH",
+          "FlightNumber": 2564
+        },
+        "Equipment": {
+          "AircraftCode": 320
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }, {
+        "Departure": {
+          "AirportCode": "LED",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T19:00"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "ROV",
+          "ScheduledTimeLocal": {
+            "DateTime": "2019-09-02T21:30"
+          }
+        },
+        "MarketingCarrier": {
+          "AirlineID": "H1",
+          "FlightNumber": 1472
+        },
+        "OperatingCarrier": {
+          "AirlineID": "DP"
+        },
+        "Equipment": {
+          "AircraftCode": 737
+        },
+        "Details": {
+          "Stops": {
+            "StopQuantity": 0
+          },
+          "DaysOfOperation": 13457,
+          "DatePeriod": {
+            "Effective": "2019-09-02",
+            "Expiration": "2019-09-09"
+          }
+        }
+      }]
+    }],
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [{
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/FRA\/ROV\/2019-09-02?directFlights=0",
+        "@Rel": "self"
+      }, {
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/FRA\/ROV\/2019-09-01?directFlights=0&offset=0&limit=20",
+        "@Rel": "previousRange"
+      }, {
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/FRA\/ROV\/2019-09-02?directFlights=0&offset=20&limit=20",
+        "@Rel": "next"
+      }, {
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/operations\/schedules\/FRA\/ROV\/2019-09-02?directFlights=0&offset=0&limit=20",
+        "@Rel": "nextRange"
+      }, {
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/mds-references\/airports\/{airportCode}",
+        "@Rel": "related"
+      }, {
+        "@Href": "https:\/\/api.lufthansa.com\/v1\/mds-references\/aircraft\/{aircraftCode}",
+        "@Rel": "related"
+      }]
+    }
+  }
+}
