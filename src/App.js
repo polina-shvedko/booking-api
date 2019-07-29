@@ -15,11 +15,20 @@ class App extends Component{
 
   render(){
     return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <Form onSubmit={fields => this.onSubmit(fields)}/>
+        <div className="App container">
+          <header className="header">
+            <div className="row align-items-center">
+              <div className="col-7 text-right">
+                <h1>Flieg einfach mit Lufthansa</h1>
+              </div>
+              <div className="col text-left">
+                <img src={logo} className="img-fluid logo" alt="logo" />
+              </div>
+            </div>
+
           </header>
+          <Form onSubmit={fields => this.onSubmit(fields)}/>
+
         </div>
     );
   }
