@@ -39,14 +39,31 @@ export default class Result extends React.Component {
 
     render() {
         const { error, isLoaded, serverResponse } = this.state;
-        let cName = 'show';
+
         if (error) {
-            return <div>Fehler: {error.message}</div>;
+            return (
+                <div className={`row`}>
+                    <div className={`col-12`}>Fehler: {error.message}</div>
+                </div>
+            );
         } else if (!isLoaded) {
-            return <div className={`preloader ${cName}`}><div className="lightbox"></div><div className="spinner"><i className="fas fa-4x fa-globe fa-pulse"></i></div></div>;
+            return (
+                <div className={`row`}>
+                    <div className={`col-12`}>
+                        <div className={`preloader show`}>
+                            <div className="lightbox">&nbsp;</div>
+                            <div className="spinner"><i className="fas fa-4x fa-globe fa-pulse"></i></div>
+                        </div>
+                    </div>
+                </div>
+            );
         } else {
             return (
-                <ResultItem key={serverResponse.toString()} item={serverResponse}/>
+                <div className={`row`}>
+                    <div className={`col-12`}>
+                        <ResultItem key={serverResponse.toString()} item={serverResponse}/>
+                    </div>
+                </div>
             );
         }
     }
