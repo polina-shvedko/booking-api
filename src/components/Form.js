@@ -1,4 +1,5 @@
 import React from 'react';
+import CitiesList from "./CitiesList";
 
 export default class Form extends React.Component {
     state = {
@@ -20,6 +21,20 @@ export default class Form extends React.Component {
         this.props.onSubmit(this.state);
     };
 
+    result: string;
+    renderList = e => {
+        let cities;
+        cities = CitiesList.list;
+
+        let result = [];
+        for (let shotCut in cities) {
+            let cityName = cities[shotCut];
+            result.push(<option value={cityName}>{shotCut}</option>);
+        }
+
+        return result;
+    };
+
     render() {
         return (
             <form method="GET">
@@ -28,7 +43,11 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <label htmlFor="abfahrt" className="col-2 col-form-label">Ankunft zu:</label>
                             <div className="col-10">
-                                <input id="ankunft" type="text" className="form-control" name="ankunft" value={this.state.ankunft} onChange={e => this.change(e)}/>
+                                <input id="ankunft" list="search" type="text" className="form-control" name="ankunft"
+                                       value={this.state.ankunft} onChange={e => this.change(e)}/>
+                                <datalist id="search">
+                                    {this.renderList()}
+                                </datalist>
                             </div>
                         </div>
                     </div>
@@ -36,7 +55,8 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <label htmlFor="tagAbfahrt" className="col-4 col-form-label">Tag des Abfahrts</label>
                             <div className="col-8">
-                                <input id="tagAbfahrt" type="text" className="form-control" name="tagAbfahrt" value={this.state.tagAbfahrt} onChange={e => this.change(e)}/>
+                                <input id="tagAbfahrt" type="text" className="form-control" name="tagAbfahrt"
+                                       value={this.state.tagAbfahrt} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
@@ -44,7 +64,8 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <label htmlFor="numReisenden" className="col-4 col-form-label">Nummer der Reisenden</label>
                             <div className="col-8">
-                                <input id="numReisenden" type="text" className="form-control" name="numReisenden" value={this.state.numReisenden} onChange={e => this.change(e)}/>
+                                <input id="numReisenden" type="text" className="form-control" name="numReisenden"
+                                       value={this.state.numReisenden} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
@@ -52,7 +73,8 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <div className="col-6">
                                 <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="isDirect" name="direct" value={this.state.isDirect} onChange={e => this.change(e)}/>
+                                    <input className="form-check-input" type="checkbox" id="isDirect" name="direct"
+                                           value={this.state.isDirect} onChange={e => this.change(e)}/>
                                     <label className="form-check-label" htmlFor="isDirect">Direct Flüg</label>
                                 </div>
                             </div>
