@@ -11,3 +11,11 @@
 .form-check-label{
     font-weight: 500;
 }
+
+.preloader{
+    display: none;
+}
+
+.preloader.show{
+    display: block;
+}

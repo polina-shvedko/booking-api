@@ -1,13 +1,15 @@
 import React from 'react';
 import CitiesList from "./CitiesList";
+import Result from "./Result";
 
 export default class Form extends React.Component {
+
     state = {
         abfahrt: '',
         ankunft: '',
         tagAbfahrt: '',
         numReisenden: '',
-        direct: ''
+        isDirect: 0
     };
 
     change = e => {
@@ -16,37 +18,71 @@ export default class Form extends React.Component {
         });
     };
 
+    changeCheckbox = e => {
+        let result = 0;
+        if(e.target.checked){
+            result = 1;
+        }
+        this.setState({
+            [e.target.name]: result
+        });
+    };
+
     onSubmit = e => {
         e.preventDefault();
-        this.props.onSubmit(this.state);
+        this.sendRequest();
     };
 
     result: string;
-    renderList = e => {
+
+    static renderList() {
         let cities;
         cities = CitiesList.list;
 
         let result = [];
         for (let shotCut in cities) {
             let cityName = cities[shotCut];
-            result.push(<option value={cityName}>{shotCut}</option>);
+            result.push(<option value={shotCut}>{cityName}</option>);
         }
 
         return result;
     };
 
+    sendRequest() {
+        let isDirect = typeof this.state.direct ==='undefined'? 0: 1;
+        let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
+
+        let result = new Result();
+        result.sendRequestFlies(url);
+
+        console.log(url);
+
+    }
+
     render() {
         return (
             <form method="GET">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-6">
                         <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-2 col-form-label">Ankunft zu:</label>
-                            <div className="col-10">
-                                <input id="ankunft" list="search" type="text" className="form-control" name="ankunft"
+                            <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
+                            <div className="col-8">
+                                <input id="abfahrt" list="searchAbfahrt" type="text" className="form-control" name="abfahrt"
+                                       value={this.state.abfahrt} onChange={e => this.change(e)}/>
+                                <datalist id="searchAbfahrt">
+                                    {Form.renderList()}
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <div className="form-group row">
+                            <label htmlFor="ankunft" className="col-4 col-form-label">Ankunft zu:</label>
+                            <div className="col-8">
+                                <input id="ankunft" list="searchAnkunft" type="text" className="form-control" name="ankunft"
                                        value={this.state.ankunft} onChange={e => this.change(e)}/>
-                                <datalist id="search">
-                                    {this.renderList()}
+                                <datalist id="searchAnkunft">
+                                    {Form.renderList()}
                                 </datalist>
                             </div>
                         </div>
@@ -55,7 +91,7 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <label htmlFor="tagAbfahrt" className="col-4 col-form-label">Tag des Abfahrts</label>
                             <div className="col-8">
-                                <input id="tagAbfahrt" type="text" className="form-control" name="tagAbfahrt"
+                                <input id="tagAbfahrt" type="date" className="form-control" name="tagAbfahrt"
                                        value={this.state.tagAbfahrt} onChange={e => this.change(e)}/>
                             </div>
                         </div>
@@ -74,7 +110,7 @@ export default class Form extends React.Component {
                             <div className="col-6">
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="isDirect" name="direct"
-                                           value={this.state.isDirect} onChange={e => this.change(e)}/>
+                                           value={this.state.isDirect} onChange={e => this.changeCheckbox(e)}/>
                                     <label className="form-check-label" htmlFor="isDirect">Direct Flüg</label>
                                 </div>
                             </div>
