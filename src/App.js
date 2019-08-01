@@ -2,8 +2,15 @@ import React, {Component} from 'react';
 import logo from './img/logo.png';
 import Form from './components/Form';
 import './App.css';
+import Result from "./components/Result";
+import LoadAirports from "./components/LoadAirports";
 
 class App extends Component{
+
+  constructor(props){
+    super(props);
+    new LoadAirports();
+  }
 
   state = {
     fields: {}
@@ -16,6 +23,7 @@ class App extends Component{
   render(){
     return (
         <div className="App container">
+          <LoadAirports/>
           <header className="header">
             <div className="row align-items-center">
               <div className="col-7 text-right">
@@ -25,10 +33,9 @@ class App extends Component{
                 <img src={logo} className="img-fluid logo" alt="logo" />
               </div>
             </div>
-
           </header>
           <Form onSubmit={fields => this.onSubmit(fields)}/>
-
+          <Result />
         </div>
     );
   }

@@ -24,18 +24,10 @@ export default class Form extends React.Component {
         return (
             <form method="GET">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12">
                         <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
-                            <div className="col-8">
-                                <input id="abfahrt" type="text" className="form-control" name="abfahrt" value={this.state.abfahrt} onChange={e => this.change(e)}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-6">
-                        <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-4 col-form-label">Ankunft zu:</label>
-                            <div className="col-8">
+                            <label htmlFor="abfahrt" className="col-2 col-form-label">Ankunft zu:</label>
+                            <div className="col-10">
                                 <input id="ankunft" type="text" className="form-control" name="ankunft" value={this.state.ankunft} onChange={e => this.change(e)}/>
                             </div>
                         </div>
