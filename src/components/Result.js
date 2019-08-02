@@ -17,7 +17,7 @@ export default class Result extends React.Component {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer bedq5v6c2amz4krnzhsq79hq',
+                'Authorization': 'Bearer pbby4rvktqwcethhpwjye8aq ',
             },
         })
             .then(res => res.json())

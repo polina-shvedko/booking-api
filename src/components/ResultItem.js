@@ -8,7 +8,7 @@ export default class ResultItem extends React.Component {
     render() {
 
         let response = this.props.item;
-
+        let cards = [];
         if(typeof response !== 'undefined' && response !== null){
             if(response.hasOwnProperty('ScheduleResource')
                 && response.ScheduleResource.hasOwnProperty('Schedule')){
@@ -35,7 +35,23 @@ export default class ResultItem extends React.Component {
                             let flugInfo;
                             flugInfo = ResultItem.getFlugInfo(flug);
 
+                            let cardHtml =
+                                <div className={`row result-item`}>
+                                    <div className={`col-12 totalZeit`}>
+                                        {totalZeit}
+                                    </div>
+                                    <div className={`col-6 abfahrt`}>
+                                        <p className={`abfahrt`}>{abfahrt}</p>
+                                    </div>
+                                    <div className={`col-6 abfahrt`}>
+                                        <p className={`ankunft`}>{ankunft}</p>
+                                    </div>
+                                    <div className={`col-12`}>
+                                        <p className={`flugInfo`}>{flugInfo}</p>
+                                    </div>
+                                </div>;
 
+                            cards.push(cardHtml);
                         }
                     }
                 }
@@ -45,7 +61,7 @@ export default class ResultItem extends React.Component {
 
         return (
             <div className="col-3">
-                {this.props.item}
+                {cards}
             </div>
         );
     }
@@ -57,11 +73,20 @@ export default class ResultItem extends React.Component {
      */
     static getAbfahrtInfo(flug) {
         let abfahrt;
+        let ergebnis = '';
         if (flug.hasOwnProperty('Departure')) {
             abfahrt = flug.Departure;
+
+            if(abfahrt.hasOwnProperty('AirportCode')){
+                ergebnis += abfahrt.AirportCode;
+            }
+
+            if(abfahrt.hasOwnProperty('ScheduledTimeLocal') && abfahrt.ScheduledTimeLocal.hasOwnProperty('DateTime')){
+                ergebnis += "<br>" + abfahrt.ScheduledTimeLocal.DateTime;
+            }
         }
 
-        return abfahrt;
+        return ergebnis;
     }
 
     /**
@@ -71,11 +96,20 @@ export default class ResultItem extends React.Component {
      */
     static getAnkunftInfo(flug) {
         let ankunft;
+        let ergebnis = '';
         if (flug.hasOwnProperty('Arrival')) {
             ankunft = flug.Arrival;
+
+            if(ankunft.hasOwnProperty('AirportCode')){
+                ergebnis += ankunft.AirportCode;
+            }
+
+            if(ankunft.hasOwnProperty('ScheduledTimeLocal') && ankunft.ScheduledTimeLocal.hasOwnProperty('DateTime')){
+                ergebnis += "<br>" + ankunft.ScheduledTimeLocal.DateTime;
+            }
         }
 
-        return ankunft;
+        return ergebnis;
     }
 
     /**
