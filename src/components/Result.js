@@ -50,7 +50,7 @@ export default class Result extends React.Component {
             return (
                 <div className={`row`}>
                     <div className={`col-12`}>
-                        <div className={`preloader show`}>
+                        <div className={`preloader`}>
                             <div className="lightbox">&nbsp;</div>
                             <div className="spinner"><i className="fas fa-4x fa-globe fa-pulse"></i></div>
                         </div>

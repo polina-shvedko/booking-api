@@ -41,8 +41,11 @@ export default class Form extends React.Component {
 
         let result = [];
         for (let shotCut in cities) {
-            let cityName = cities[shotCut];
-            result.push(<option value={shotCut}>{cityName}</option>);
+            if(cities.hasOwnProperty(shotCut)){
+                let cityName = cities[shotCut];
+                result.push(<option value={shotCut}>{cityName}</option>);
+            }
+
         }
 
         return result;

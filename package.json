@@ -1,12 +1,12 @@
 {
   "name": "booking-api",
-  "homepage": "https://polina-shvedko.github.io/booking-api/",
+  "homepage": "https://polina-shvedko.github.io/booking-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "bootstrap": "^4.3.1",
-    "gh-pages": "^2.1.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
