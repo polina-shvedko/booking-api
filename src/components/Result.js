@@ -12,12 +12,13 @@ export default class Result extends React.Component {
     }
 
     sendRequestFlies(url){
+        let apiKey = localStorage.getItem('keyAPI') || null;
         fetch(url, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer pbby4rvktqwcethhpwjye8aq ',
+                'Authorization': 'Bearer ' + apiKey,
             },
         })
             .then(res => res.json())

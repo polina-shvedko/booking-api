@@ -16,20 +16,20 @@ export default class Auth extends React.Component {
         data.append('client_secret', '6gFXhBHT5u');
         data.append('grant_type', 'client_credentials');
 
+        let headersContent = new Headers();
+        headersContent.append( "Content-Type", "application/x-www-form-urlencoded");
+        headersContent.append("Accept", "*/*");
+        headersContent.append("Cache-Control", "no-cache");
+        headersContent.append("Accept-Encoding", "gzip, deflate");
+        headersContent.append("Content-Length", "89");
+        headersContent.append("Connection", "keep-alive");
+        headersContent.append("cache-control", "no-cache");
+        headersContent.append("Access-Control-Allow-Origin", "*");
+
         fetch('https://api.lufthansa.com/v1/oauth/token', {
             method: 'POST',
             mode : 'no-cors',
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Accept": "*/*",
-                "Cache-Control": "no-cache",
-                "Accept-Encoding": "gzip, deflate",
-                "Content-Length": "89",
-                "Connection": "keep-alive",
-                "cache-control": "no-cache",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Expose-Headers": "X-Mashery-Error-Code, X-Mashery-Responder"
-            },
+            headers: headersContent,
             body: data,
         })
             .then(res => res.json())
@@ -71,7 +71,7 @@ export default class Auth extends React.Component {
             );
         } else {
             if(serverResponse.hasOwnProperty('access_token')){
-                localStorage.setItem('key', serverResponse.access_token);
+                localStorage.setItem('keyAPI', serverResponse.access_token);
             }
 
             if(serverResponse.hasOwnProperty('error')){
