@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8b6bc47ccf4e88d5ddb0ea230c73baf",
+    "revision": "85ce01a5a6490bc15aa75ceb9e05248e",
     "url": "/booking-api/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/booking-api/static/css/2.7ba8e5e2.chunk.css"
   },
   {
-    "revision": "ae084673976c159e2179",
+    "revision": "3368bba23095de70e49d",
     "url": "/booking-api/static/css/main.6bdafd19.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/booking-api/static/js/2.250688cf.chunk.js"
   },
   {
-    "revision": "ae084673976c159e2179",
-    "url": "/booking-api/static/js/main.0e079cf9.chunk.js"
+    "revision": "3368bba23095de70e49d",
+    "url": "/booking-api/static/js/main.75775108.chunk.js"
   },
   {
     "revision": "713917822ed447436873",
