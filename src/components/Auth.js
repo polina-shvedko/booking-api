@@ -11,26 +11,26 @@ export default class Auth extends React.Component {
     }
 
     sendRequestAuth(){
+        let data = new URLSearchParams();
+        data.append('client_id', 'f89h9grfggwh4247f6baxkz2');
+        data.append('client_secret', '6gFXhBHT5u');
+        data.append('grant_type', 'client_credentials');
+
         fetch('https://api.lufthansa.com/v1/oauth/token', {
             method: 'POST',
             mode : 'no-cors',
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
-                "User-Agent": "PostmanRuntime/7.15.2",
                 "Accept": "*/*",
                 "Cache-Control": "no-cache",
-                "Postman-Token": "21f826f7-43f9-40aa-92a3-e1d7de1d555d,6f6d5c2f-facd-45fa-9251-bc24694b79b6",
-                "Host": "api.lufthansa.com",
                 "Accept-Encoding": "gzip, deflate",
                 "Content-Length": "89",
                 "Connection": "keep-alive",
-                "cache-control": "no-cache"
+                "cache-control": "no-cache",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Expose-Headers": "X-Mashery-Error-Code, X-Mashery-Responder"
             },
-            body: {
-                "client_id": "f89h9grfggwh4247f6baxkz2",
-                "client_secret": "6gFXhBHT5u",
-                "grant_type": "client_credentials"
-            },
+            body: data,
         })
             .then(res => res.json())
             .then(
