@@ -17,7 +17,6 @@ class App extends Component {
 
         return (
             <div className="App container">
-                <Auth/>
                 <header className="header">
                     <div className="row align-items-center">
                         <div className="col-7 text-right">

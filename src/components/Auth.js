@@ -32,15 +32,26 @@ export default class Auth extends React.Component {
             headers: headersContent,
             body: data,
         })
-            .then(res => res.json())
+            .then(
+                res => {
+                    console.log(res);
+                    res.json();
+                }
+            )
             .then(
                 (result) => {
+                    console.log(result);
                     this.setState({
                         isLoaded: true,
                         serverResponse: result
                     });
+
+                    if(result.hasOwnProperty('access_token')){
+                        localStorage.setItem('keyAPI', result.access_token);
+                    }
                 },
                 (error) => {
+                    console.log(error);
                     this.setState({
                         isLoaded: true,
                         error

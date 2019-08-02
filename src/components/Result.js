@@ -13,6 +13,7 @@ export default class Result extends React.Component {
 
     sendRequestFlies(url){
         let apiKey = localStorage.getItem('keyAPI') || null;
+        // let apiKey = 'bhdtndbgu4pckb9umb6p9fcp';
         fetch(url, {
             method: 'GET',
             headers: {
