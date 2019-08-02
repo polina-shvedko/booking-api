@@ -32,12 +32,7 @@ export default class Auth extends React.Component {
             headers: headersContent,
             body: data,
         })
-            .then(
-                res => {
-                    console.log(res);
-                    res.json();
-                }
-            )
+            .then(res => res.json())
             .then(
                 (result) => {
                     console.log(result);
@@ -51,7 +46,6 @@ export default class Auth extends React.Component {
                     }
                 },
                 (error) => {
-                    console.log(error);
                     this.setState({
                         isLoaded: true,
                         error
