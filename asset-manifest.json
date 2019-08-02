@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/booking-api/static/css/main.6bdafd19.chunk.css",
+    "main.js": "/booking-api/static/js/main.3ef5111a.chunk.js",
+    "main.js.map": "/booking-api/static/js/main.3ef5111a.chunk.js.map",
+    "runtime~main.js": "/booking-api/static/js/runtime~main.da50b32c.js",
+    "runtime~main.js.map": "/booking-api/static/js/runtime~main.da50b32c.js.map",
+    "static/css/2.7ba8e5e2.chunk.css": "/booking-api/static/css/2.7ba8e5e2.chunk.css",
+    "static/js/2.250688cf.chunk.js": "/booking-api/static/js/2.250688cf.chunk.js",
+    "static/js/2.250688cf.chunk.js.map": "/booking-api/static/js/2.250688cf.chunk.js.map",
+    "index.html": "/booking-api/index.html",
+    "precache-manifest.b2f574d7de9e6c89dc03b7b328485fdf.js": "/booking-api/precache-manifest.b2f574d7de9e6c89dc03b7b328485fdf.js",
+    "service-worker.js": "/booking-api/service-worker.js",
+    "static/css/2.7ba8e5e2.chunk.css.map": "/booking-api/static/css/2.7ba8e5e2.chunk.css.map",
+    "static/css/main.6bdafd19.chunk.css.map": "/booking-api/static/css/main.6bdafd19.chunk.css.map",
+    "static/media/all.css": "/booking-api/static/media/fa-solid-900.f9b8a1aa.eot",
+    "static/media/logo.png": "/booking-api/static/media/logo.e11a9328.png"
+  }
+}
