@@ -138,6 +138,11 @@ export default class ResultItem extends React.Component {
         return ergebnis;
     }
 
+    /**
+     *
+     * @param duration
+     * @returns {string}
+     */
     static getDurationFormatted(duration) {
         let res = '';
 
@@ -162,9 +167,9 @@ export default class ResultItem extends React.Component {
         }
 
         if(tage !== ''){
-            res = tage + " Tage " + stunden + " Stunden " + minuten + " Minuten"
+            res = tage + " T. " + stunden + " St. " + minuten + " Min."
         } else {
-            res = stunden + " Stunden " + minuten + " Minuten"
+            res = stunden + " St. " + minuten + " Min."
         }
         return res;
     }

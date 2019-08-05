@@ -10,7 +10,6 @@ export default class Form extends React.Component {
         ankunft: '',
         tagAbfahrt: '',
         numReisenden: '',
-        isDirect: 0,
         error: null,
         isLoaded: false,
         serverResponse: {}
@@ -80,7 +79,7 @@ export default class Form extends React.Component {
 
     resultElement: Object;
     sendRequest() {
-        let isDirect = typeof this.state.direct ==='undefined'? 0: 1;
+        let isDirect = 1;
         let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
 
         this.sendRequestFlies(url);
@@ -134,14 +133,7 @@ export default class Form extends React.Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group row">
-                            <div className="col-6">
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="isDirect" name="direct"
-                                           value={this.state.isDirect} onChange={e => this.changeCheckbox(e)}/>
-                                    <label className="form-check-label" htmlFor="isDirect">Direct Flüg</label>
-                                </div>
-                            </div>
-                            <div className="col-6 text-right">
+                            <div className="col-12 text-right">
                                 <button onClick={e => this.onSubmit(e)} className="btn btn-success">Suchen</button>
                             </div>
                         </div>
