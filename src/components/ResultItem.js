@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class ResultItem extends React.Component {
     /**
      *
@@ -9,21 +10,21 @@ export default class ResultItem extends React.Component {
 
         let response = this.props.item;
         let cards = [];
-        if(typeof response !== 'undefined' && response !== null){
-            if(response.hasOwnProperty('ScheduleResource')
-                && response.ScheduleResource.hasOwnProperty('Schedule')){
+        if (typeof response !== 'undefined' && response !== null) {
+            if (response.hasOwnProperty('ScheduleResource')
+                && response.ScheduleResource.hasOwnProperty('Schedule')) {
                 let schedules = response.ScheduleResource.Schedule;
 
                 let totalZeit = '';
-                for(let attribute in schedules){
-                    if(schedules.hasOwnProperty(attribute)){
+                for (let attribute in schedules) {
+                    if (schedules.hasOwnProperty(attribute)) {
                         let schedule = schedules[attribute];
-                        if(schedule.hasOwnProperty('TotalJourney')
-                            && schedule.TotalJourney.hasOwnProperty('Duration')){
-                            totalZeit = schedule.TotalJourney.Duration;
+                        if (schedule.hasOwnProperty('TotalJourney')
+                            && schedule.TotalJourney.hasOwnProperty('Duration')) {
+                            totalZeit = ResultItem.getDurationFormatted(schedule.TotalJourney.Duration);
                         }
 
-                        if(schedule.hasOwnProperty('Flight')){
+                        if (schedule.hasOwnProperty('Flight')) {
                             let flug = schedule.Flight;
 
                             let abfahrt = '';
@@ -42,10 +43,10 @@ export default class ResultItem extends React.Component {
                                             {totalZeit}
                                         </div>
                                         <div className={`col-6 abfahrt`}>
-                                            <p className={`abfahrt`}>{abfahrt}</p>
+                                            <p className={`abfahrt`} dangerouslySetInnerHTML={{__html: abfahrt}}></p>
                                         </div>
                                         <div className={`col-6 ankunft`}>
-                                            <p className={`ankunft`}>{ankunft}</p>
+                                            <p className={`ankunft`} dangerouslySetInnerHTML={{__html: ankunft}}></p>
                                         </div>
                                         <div className={`col-12`}>
                                             <p className={`flugInfo`}>{flugInfo}</p>
@@ -79,11 +80,11 @@ export default class ResultItem extends React.Component {
         if (flug.hasOwnProperty('Departure')) {
             abfahrt = flug.Departure;
 
-            if(abfahrt.hasOwnProperty('AirportCode')){
+            if (abfahrt.hasOwnProperty('AirportCode')) {
                 ergebnis += abfahrt.AirportCode;
             }
 
-            if(abfahrt.hasOwnProperty('ScheduledTimeLocal') && abfahrt.ScheduledTimeLocal.hasOwnProperty('DateTime')){
+            if (abfahrt.hasOwnProperty('ScheduledTimeLocal') && abfahrt.ScheduledTimeLocal.hasOwnProperty('DateTime')) {
                 ergebnis += "<br>" + abfahrt.ScheduledTimeLocal.DateTime;
             }
         }
@@ -102,11 +103,11 @@ export default class ResultItem extends React.Component {
         if (flug.hasOwnProperty('Arrival')) {
             ankunft = flug.Arrival;
 
-            if(ankunft.hasOwnProperty('AirportCode')){
+            if (ankunft.hasOwnProperty('AirportCode')) {
                 ergebnis += ankunft.AirportCode;
             }
 
-            if(ankunft.hasOwnProperty('ScheduledTimeLocal') && ankunft.ScheduledTimeLocal.hasOwnProperty('DateTime')){
+            if (ankunft.hasOwnProperty('ScheduledTimeLocal') && ankunft.ScheduledTimeLocal.hasOwnProperty('DateTime')) {
                 ergebnis += "<br>" + ankunft.ScheduledTimeLocal.DateTime;
             }
         }
@@ -125,15 +126,46 @@ export default class ResultItem extends React.Component {
         if (flug.hasOwnProperty('MarketingCarrier')) {
             flugInfo = flug.MarketingCarrier;
 
-            if(flugInfo.hasOwnProperty('AirlineID')){
+            if (flugInfo.hasOwnProperty('AirlineID')) {
                 ergebnis += flugInfo.AirlineID;
             }
 
-            if(flugInfo.hasOwnProperty('FlightNumber')){
+            if (flugInfo.hasOwnProperty('FlightNumber')) {
                 ergebnis += " " + flugInfo.FlightNumber;
             }
         }
 
         return ergebnis;
+    }
+
+    static getDurationFormatted(duration) {
+        let res = '';
+
+        let zeitBuschtabe = duration.indexOf('T');
+        let tagBuschtabe = duration.indexOf('D');
+
+        let tage = '';
+
+        if(tagBuschtabe !== -1){
+            tage = duration.substr(1, tagBuschtabe);
+        }
+
+        let stunden = '';
+        let minuten = '';
+
+        if (zeitBuschtabe !== -1) {
+            let stundenPosition = duration.indexOf('H');
+            stunden = duration.substr(2, stundenPosition - 2);
+
+            let minutenPosition = duration.indexOf('M');
+            minuten = duration.substr(stundenPosition + 1, minutenPosition - stundenPosition - 1);
+        }
+
+        if(tage !== ''){
+            res = tage + " Tage " + stunden + " Stunden " + minuten + " Minuten"
+        } else {
+            res = stunden + " Stunden " + minuten + " Minuten"
+        }
+        return res;
     }
 }
