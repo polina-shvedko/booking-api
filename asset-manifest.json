@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/booking-api/static/css/main.6bdafd19.chunk.css",
-    "main.js": "/booking-api/static/js/main.3db54074.chunk.js",
-    "main.js.map": "/booking-api/static/js/main.3db54074.chunk.js.map",
+    "main.css": "/booking-api/static/css/main.c5f262d8.chunk.css",
+    "main.js": "/booking-api/static/js/main.37f27bb0.chunk.js",
+    "main.js.map": "/booking-api/static/js/main.37f27bb0.chunk.js.map",
     "runtime~main.js": "/booking-api/static/js/runtime~main.da50b32c.js",
     "runtime~main.js.map": "/booking-api/static/js/runtime~main.da50b32c.js.map",
-    "static/css/2.7ba8e5e2.chunk.css": "/booking-api/static/css/2.7ba8e5e2.chunk.css",
-    "static/js/2.250688cf.chunk.js": "/booking-api/static/js/2.250688cf.chunk.js",
-    "static/js/2.250688cf.chunk.js.map": "/booking-api/static/js/2.250688cf.chunk.js.map",
+    "static/css/2.bb37b0cc.chunk.css": "/booking-api/static/css/2.bb37b0cc.chunk.css",
+    "static/js/2.8ebfe747.chunk.js": "/booking-api/static/js/2.8ebfe747.chunk.js",
+    "static/js/2.8ebfe747.chunk.js.map": "/booking-api/static/js/2.8ebfe747.chunk.js.map",
     "index.html": "/booking-api/index.html",
-    "precache-manifest.3da1de994af79821cf17fd1cd398c797.js": "/booking-api/precache-manifest.3da1de994af79821cf17fd1cd398c797.js",
+    "precache-manifest.6082dc3df493758ad2f92fe183df3537.js": "/booking-api/precache-manifest.6082dc3df493758ad2f92fe183df3537.js",
     "service-worker.js": "/booking-api/service-worker.js",
-    "static/css/2.7ba8e5e2.chunk.css.map": "/booking-api/static/css/2.7ba8e5e2.chunk.css.map",
-    "static/css/main.6bdafd19.chunk.css.map": "/booking-api/static/css/main.6bdafd19.chunk.css.map",
+    "static/css/2.bb37b0cc.chunk.css.map": "/booking-api/static/css/2.bb37b0cc.chunk.css.map",
+    "static/css/main.c5f262d8.chunk.css.map": "/booking-api/static/css/main.c5f262d8.chunk.css.map",
     "static/media/all.css": "/booking-api/static/media/fa-solid-900.f9b8a1aa.eot",
     "static/media/logo.png": "/booking-api/static/media/logo.e11a9328.png"
   }
