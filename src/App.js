@@ -3,7 +3,6 @@ import logo from './img/logo.png';
 import Form from './components/Form';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './App.css';
-import Result from "./components/Result";
 import Auth from "./components/Auth";
 
 class App extends Component {
@@ -28,7 +27,6 @@ class App extends Component {
                     </div>
                 </header>
                 <Form/>
-                <Result/>
             </div>
         );
     }

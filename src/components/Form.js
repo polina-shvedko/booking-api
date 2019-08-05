@@ -1,6 +1,7 @@
 import React from 'react';
 import CitiesList from "./CitiesList";
 import Result from "./Result";
+import * as axios from "axios";
 
 export default class Form extends React.Component {
 
@@ -9,7 +10,10 @@ export default class Form extends React.Component {
         ankunft: '',
         tagAbfahrt: '',
         numReisenden: '',
-        isDirect: 0
+        isDirect: 0,
+        error: null,
+        isLoaded: false,
+        serverResponse: {}
     };
 
     change = e => {
@@ -33,7 +37,6 @@ export default class Form extends React.Component {
         this.sendRequest();
     };
 
-    result: string;
 
     static renderList() {
         let cities;
@@ -51,15 +54,36 @@ export default class Form extends React.Component {
         return result;
     };
 
+    sendRequestFlies(url){
+        let apiKey = localStorage.getItem('keyAPI') || null;
+
+        axios.get(url, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + apiKey
+            }
+        }).then( (response) => {
+                this.setState({
+                    isLoaded: true,
+                    serverResponse: response.data
+                });
+            }
+        )
+            .catch((response) => {
+                this.setState({
+                    isLoaded: false,
+                    error: response
+                });
+            });
+    }
+
+    resultElement: Object;
     sendRequest() {
         let isDirect = typeof this.state.direct ==='undefined'? 0: 1;
         let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
 
-        let result = new Result();
-        result.sendRequestFlies(url);
-
-        console.log(url);
-
+        this.sendRequestFlies(url);
     }
 
     render() {
@@ -124,6 +148,8 @@ export default class Form extends React.Component {
                     </div>
 
                 </div>
+
+                <Result  item={this.state.serverResponse}/>
             </form>
         );
     }

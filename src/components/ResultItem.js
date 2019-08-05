@@ -36,18 +36,20 @@ export default class ResultItem extends React.Component {
                             flugInfo = ResultItem.getFlugInfo(flug);
 
                             let cardHtml =
-                                <div className={`row result-item`}>
-                                    <div className={`col-12 totalZeit`}>
-                                        {totalZeit}
-                                    </div>
-                                    <div className={`col-6 abfahrt`}>
-                                        <p className={`abfahrt`}>{abfahrt}</p>
-                                    </div>
-                                    <div className={`col-6 abfahrt`}>
-                                        <p className={`ankunft`}>{ankunft}</p>
-                                    </div>
-                                    <div className={`col-12`}>
-                                        <p className={`flugInfo`}>{flugInfo}</p>
+                                <div className={`col-12 col-sm-6 col-md-4 p-0`}>
+                                    <div className={`row result-item`}>
+                                        <div className={`col-12 totalZeit`}>
+                                            {totalZeit}
+                                        </div>
+                                        <div className={`col-6 abfahrt`}>
+                                            <p className={`abfahrt`}>{abfahrt}</p>
+                                        </div>
+                                        <div className={`col-6 ankunft`}>
+                                            <p className={`ankunft`}>{ankunft}</p>
+                                        </div>
+                                        <div className={`col-12`}>
+                                            <p className={`flugInfo`}>{flugInfo}</p>
+                                        </div>
                                     </div>
                                 </div>;
 
@@ -60,7 +62,7 @@ export default class ResultItem extends React.Component {
         }
 
         return (
-            <div className="col-3">
+            <div className="row">
                 {cards}
             </div>
         );
