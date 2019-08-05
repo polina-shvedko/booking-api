@@ -85,7 +85,7 @@ export default class ResultItem extends React.Component {
             }
 
             if (abfahrt.hasOwnProperty('ScheduledTimeLocal') && abfahrt.ScheduledTimeLocal.hasOwnProperty('DateTime')) {
-                ergebnis += "<br>" + abfahrt.ScheduledTimeLocal.DateTime;
+                ergebnis += "<br>" + ResultItem.getTimeFormatted(abfahrt.ScheduledTimeLocal.DateTime) + "<br>" + ResultItem.getDateFormatted(abfahrt.ScheduledTimeLocal.DateTime);
             }
         }
 
@@ -108,7 +108,7 @@ export default class ResultItem extends React.Component {
             }
 
             if (ankunft.hasOwnProperty('ScheduledTimeLocal') && ankunft.ScheduledTimeLocal.hasOwnProperty('DateTime')) {
-                ergebnis += "<br>" + ankunft.ScheduledTimeLocal.DateTime;
+                ergebnis += "<br>" + ResultItem.getTimeFormatted(ankunft.ScheduledTimeLocal.DateTime) + "<br>" + ResultItem.getDateFormatted(ankunft.ScheduledTimeLocal.DateTime);
             }
         }
 
@@ -151,7 +151,7 @@ export default class ResultItem extends React.Component {
 
         let tage = '';
 
-        if(tagBuschtabe !== -1){
+        if (tagBuschtabe !== -1) {
             tage = duration.substr(1, tagBuschtabe);
         }
 
@@ -166,11 +166,43 @@ export default class ResultItem extends React.Component {
             minuten = duration.substr(stundenPosition + 1, minutenPosition - stundenPosition - 1);
         }
 
-        if(tage !== ''){
+        if (tage !== '') {
             res = tage + " T. " + stunden + " St. " + minuten + " Min."
         } else {
             res = stunden + " St. " + minuten + " Min."
         }
         return res;
+    }
+
+    /**
+     *
+     * @param duration
+     * @returns {string}
+     */
+    static getTimeFormatted(duration) {
+        let zeit = '';
+        let zeitBuschtabe = duration.indexOf('T');
+
+        if (zeitBuschtabe !== -1) {
+            zeit = duration.substr(zeitBuschtabe + 1, duration.length - 1);
+        }
+
+        return zeit;
+    }
+
+    /**
+     *
+     * @param duration
+     * @returns {string}
+     */
+    static getDateFormatted(duration) {
+        let date = '';
+        let zeitBuschtabe = duration.indexOf('T');
+
+        if (zeitBuschtabe !== -1) {
+            date = duration.substr(0, zeitBuschtabe);
+        }
+
+        return date;
     }
 }
