@@ -5,11 +5,22 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './App.css';
 import Auth from "./components/Auth";
 
+/**
+ *
+ */
 class App extends Component {
+    /**
+     *
+     * @type {{fields: {}}}
+     */
     state = {
         fields: {}
     };
 
+    /**
+     *
+     * @returns {*}
+     */
     render() {
         let auth = new Auth();
         auth.sendRequestAuth();

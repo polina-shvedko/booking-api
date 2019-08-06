@@ -1,7 +1,15 @@
 import React from 'react';
 import ResultItem from "./ResultItem";
 
+/**
+ *
+ */
 export default class Result extends React.Component {
+
+    /**
+     *
+     * @returns {*}
+     */
    render() {
        let serverResponse = this.props.item;
         return (

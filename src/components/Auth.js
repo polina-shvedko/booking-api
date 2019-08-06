@@ -1,6 +1,9 @@
 import React from 'react';
 import * as axios from "axios";
 
+/**
+ *
+ */
 export default class Auth extends React.Component {
     constructor(props) {
         super(props);
@@ -11,6 +14,9 @@ export default class Auth extends React.Component {
         };
     }
 
+    /**
+     *
+     */
     sendRequestAuth() {
         let data = new URLSearchParams();
         data.append('client_id', 'f89h9grfggwh4247f6baxkz2');
@@ -48,6 +54,10 @@ export default class Auth extends React.Component {
         });
     }
 
+    /**
+     *
+     * @returns {string|*}
+     */
     render() {
         const {error, isLoaded, serverResponse} = this.state;
 
