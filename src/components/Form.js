@@ -5,34 +5,38 @@ import * as axios from "axios";
 
 export default class Form extends React.Component {
 
+    /**
+     *
+     * @type {{ankunft: string, serverResponse: {}, abfahrt: string, error: null, tagAbfahrt: string, isLoaded: boolean}}
+     */
     state = {
         abfahrt: '',
         ankunft: '',
         tagAbfahrt: '',
-        numReisenden: '',
         error: null,
         isLoaded: false,
         serverResponse: {}
     };
 
+    /**
+     *
+     */
     preloader: string;
 
+    /**
+     *
+     * @param e
+     */
     change = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
     };
 
-    changeCheckbox = e => {
-        let result = 0;
-        if (e.target.checked) {
-            result = 1;
-        }
-        this.setState({
-            [e.target.name]: result
-        });
-    };
-
+    /**
+     *
+     * @param e
+     */
     onSubmit = e => {
         e.preventDefault();
         this.preloader = <div className={`preloader show`}>
@@ -42,19 +46,26 @@ export default class Form extends React.Component {
         this.sendRequest();
     };
 
+    /**
+     *
+     * @param e
+     */
     onReset = e => {
         e.preventDefault();
         this.setState({
             abfahrt: '',
             ankunft: '',
             tagAbfahrt: '',
-            numReisenden: '',
             error: null,
             isLoaded: false,
             serverResponse: {}
         });
     };
 
+    /**
+     *
+     * @returns {[]}
+     */
     static renderList() {
         let cities;
         cities = CitiesList.list;
@@ -71,6 +82,10 @@ export default class Form extends React.Component {
         return result;
     };
 
+    /**
+     *
+     * @param url
+     */
     sendRequestFlies(url) {
         let apiKey = localStorage.getItem('keyAPI') || null;
         axios.get(url, {
@@ -111,6 +126,9 @@ export default class Form extends React.Component {
             });
     }
 
+    /**
+     *
+     */
     sendRequest() {
         let isDirect = 1;
         let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
@@ -118,15 +136,19 @@ export default class Form extends React.Component {
         this.sendRequestFlies(url);
     }
 
+    /**
+     *
+     * @returns {*}
+     */
     render() {
         return (
             <form method="GET">
                 <div className={`alert alert-danger ` + (this.state.error ? `show` : ``)}>{this.state.error}</div>
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12">
                         <div className="form-group row">
-                            <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
-                            <div className="col-8">
+                            <label htmlFor="abfahrt" className="col-4 col-md-2 col-form-label">Abfahrt von:</label>
+                            <div className="col-8 col-md-10">
                                 <input id="abfahrt" list="searchAbfahrt" type="text" className="form-control"
                                        name="abfahrt"
                                        value={this.state.abfahrt} onChange={e => this.change(e)}/>
@@ -136,10 +158,10 @@ export default class Form extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12">
                         <div className="form-group row">
-                            <label htmlFor="ankunft" className="col-4 col-form-label">Ankunft zu:</label>
-                            <div className="col-8">
+                            <label htmlFor="ankunft" className="col-4 col-md-2 col-form-label">Ankunft zu:</label>
+                            <div className="col-8 col-md-10">
                                 <input id="ankunft" list="searchAnkunft" type="text" className="form-control"
                                        name="ankunft"
                                        value={this.state.ankunft} onChange={e => this.change(e)}/>
@@ -149,21 +171,12 @@ export default class Form extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12">
                         <div className="form-group row">
-                            <label htmlFor="tagAbfahrt" className="col-4 col-form-label">Tag des Abfahrts</label>
-                            <div className="col-8">
+                            <label htmlFor="tagAbfahrt" className="col-4 col-md-2 col-form-label">Tag des Abfahrts</label>
+                            <div className="col-8 col-md-10">
                                 <input id="tagAbfahrt" type="date" className="form-control" name="tagAbfahrt"
                                        value={this.state.tagAbfahrt} onChange={e => this.change(e)}/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6">
-                        <div className="form-group row">
-                            <label htmlFor="numReisenden" className="col-4 col-form-label">Nummer der Reisenden</label>
-                            <div className="col-8">
-                                <input id="numReisenden" type="text" className="form-control" name="numReisenden"
-                                       value={this.state.numReisenden} onChange={e => this.change(e)}/>
                             </div>
                         </div>
                     </div>
