@@ -46,3 +46,11 @@
     padding: 1rem;
     margin: 0.25rem;
 }
+
+.alert{
+    display: none;
+}
+
+.alert.show{
+    display: block;
+}

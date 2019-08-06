@@ -39,8 +39,6 @@ export default class Auth extends React.Component {
                 isLoaded: true,
                 serverResponse: result.data
             });
-
-
         })
         .catch((response) => {
             this.setState({

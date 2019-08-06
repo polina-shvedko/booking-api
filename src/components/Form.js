@@ -15,6 +15,8 @@ export default class Form extends React.Component {
         serverResponse: {}
     };
 
+    preloader: string;
+
     change = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -23,7 +25,7 @@ export default class Form extends React.Component {
 
     changeCheckbox = e => {
         let result = 0;
-        if(e.target.checked){
+        if (e.target.checked) {
             result = 1;
         }
         this.setState({
@@ -33,6 +35,10 @@ export default class Form extends React.Component {
 
     onSubmit = e => {
         e.preventDefault();
+        this.preloader = <div className={`preloader show`}>
+            <div className={`lightbox`}></div>
+            <div className={`spinner`}></div>
+        </div>;
         this.sendRequest();
     };
 
@@ -43,7 +49,7 @@ export default class Form extends React.Component {
 
         let result = [];
         for (let shotCut in cities) {
-            if(cities.hasOwnProperty(shotCut)){
+            if (cities.hasOwnProperty(shotCut)) {
                 let cityName = cities[shotCut];
                 result.push(<option value={shotCut}>{cityName}</option>);
             }
@@ -53,31 +59,46 @@ export default class Form extends React.Component {
         return result;
     };
 
-    sendRequestFlies(url){
+    sendRequestFlies(url) {
         let apiKey = localStorage.getItem('keyAPI') || null;
-
         axios.get(url, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + apiKey
             }
-        }).then( (response) => {
+        }).then((response) => {
+                this.preloader = '';
                 this.setState({
                     isLoaded: true,
-                    serverResponse: response.data
+                    serverResponse: response.data,
+                    error: ''
                 });
             }
         )
             .catch((response) => {
+                let error = '';
+                if(response.hasOwnProperty('response') && response.response.hasOwnProperty('status')){
+                    switch (response.response.status) {
+                        case 404:
+                            error = 'Kein Flug wurde gefunden!';
+                            break;
+                        case 500:
+                            error = 'Server Fehler!';
+                            break;
+                        default:
+                            error = 'Kein Flug wurde gefunden!';
+                            break;
+                    }
+                }
+                this.preloader = '';
                 this.setState({
                     isLoaded: false,
-                    error: response
+                    error: error
                 });
             });
     }
 
-    resultElement: Object;
     sendRequest() {
         let isDirect = 1;
         let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
@@ -88,12 +109,14 @@ export default class Form extends React.Component {
     render() {
         return (
             <form method="GET">
+                <div className={`alert alert-danger ` + (this.state.error ? `show` : ``)}>{this.state.error}</div>
                 <div className="row">
                     <div className="col-6">
                         <div className="form-group row">
                             <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
                             <div className="col-8">
-                                <input id="abfahrt" list="searchAbfahrt" type="text" className="form-control" name="abfahrt"
+                                <input id="abfahrt" list="searchAbfahrt" type="text" className="form-control"
+                                       name="abfahrt"
                                        value={this.state.abfahrt} onChange={e => this.change(e)}/>
                                 <datalist id="searchAbfahrt">
                                     {Form.renderList()}
@@ -105,7 +128,8 @@ export default class Form extends React.Component {
                         <div className="form-group row">
                             <label htmlFor="ankunft" className="col-4 col-form-label">Ankunft zu:</label>
                             <div className="col-8">
-                                <input id="ankunft" list="searchAnkunft" type="text" className="form-control" name="ankunft"
+                                <input id="ankunft" list="searchAnkunft" type="text" className="form-control"
+                                       name="ankunft"
                                        value={this.state.ankunft} onChange={e => this.change(e)}/>
                                 <datalist id="searchAnkunft">
                                     {Form.renderList()}
@@ -141,8 +165,10 @@ export default class Form extends React.Component {
 
                 </div>
 
-                <Result  item={this.state.serverResponse}/>
+                <Result item={this.state.serverResponse}/>
+                {this.preloader}
             </form>
+
         );
     }
 }
