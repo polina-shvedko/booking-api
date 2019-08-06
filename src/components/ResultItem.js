@@ -38,17 +38,24 @@ export default class ResultItem extends React.Component {
 
                             let cardHtml =
                                 <div className={`col-12 col-sm-6 col-md-4 p-0`}>
-                                    <div className={`row result-item`}>
-                                        <div className={`col-12 totalZeit`}>
+                                    <div className={`row result-item align-items-center`}>
+                                        <div className={`col-12 totalZeit mb-3`}>
+                                            <p className={`mb-0 title`}>Flugdauer</p>
                                             {totalZeit}
                                         </div>
-                                        <div className={`col-6 abfahrt`}>
+                                        <div className={`col-4 abfahrt`}>
+                                            <p className={`mb-0 title`}>Abfahrt</p>
                                             <p className={`abfahrt`} dangerouslySetInnerHTML={{__html: abfahrt}}></p>
                                         </div>
-                                        <div className={`col-6 ankunft`}>
+                                        <div className={`col-4 text-center`}>
+                                            <i className="fas fa-chevron-right fa-3x"></i>
+                                        </div>
+                                        <div className={`col-4 ankunft`}>
+                                            <p className={`mb-0 title`}>Ankunft</p>
                                             <p className={`ankunft`} dangerouslySetInnerHTML={{__html: ankunft}}></p>
                                         </div>
                                         <div className={`col-12`}>
+                                            <p className={`mb-0 title`}>Flug Info</p>
                                             <p className={`flugInfo`}>{flugInfo}</p>
                                         </div>
                                     </div>
@@ -168,8 +175,10 @@ export default class ResultItem extends React.Component {
 
         if (tage !== '') {
             res = tage + " T. " + stunden + " St. " + minuten + " Min."
-        } else {
+        } else if(minuten !== '') {
             res = stunden + " St. " + minuten + " Min."
+        } else if(minuten === ''){
+            res = stunden + " Stunden";
         }
         return res;
     }

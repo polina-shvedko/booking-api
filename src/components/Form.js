@@ -42,6 +42,18 @@ export default class Form extends React.Component {
         this.sendRequest();
     };
 
+    onReset = e => {
+        e.preventDefault();
+        this.setState({
+            abfahrt: '',
+            ankunft: '',
+            tagAbfahrt: '',
+            numReisenden: '',
+            error: null,
+            isLoaded: false,
+            serverResponse: {}
+        });
+    };
 
     static renderList() {
         let cities;
@@ -111,7 +123,7 @@ export default class Form extends React.Component {
             <form method="GET">
                 <div className={`alert alert-danger ` + (this.state.error ? `show` : ``)}>{this.state.error}</div>
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <div className="form-group row">
                             <label htmlFor="abfahrt" className="col-4 col-form-label">Abfahrt von:</label>
                             <div className="col-8">
@@ -124,7 +136,7 @@ export default class Form extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <div className="form-group row">
                             <label htmlFor="ankunft" className="col-4 col-form-label">Ankunft zu:</label>
                             <div className="col-8">
@@ -137,7 +149,7 @@ export default class Form extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <div className="form-group row">
                             <label htmlFor="tagAbfahrt" className="col-4 col-form-label">Tag des Abfahrts</label>
                             <div className="col-8">
@@ -146,7 +158,7 @@ export default class Form extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <div className="form-group row">
                             <label htmlFor="numReisenden" className="col-4 col-form-label">Nummer der Reisenden</label>
                             <div className="col-8">
@@ -157,7 +169,10 @@ export default class Form extends React.Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group row">
-                            <div className="col-12 text-right">
+                            <div className="col-6">
+                                <button onClick={e => this.onReset(e)} className="btn btn-danger">Zurücksetzen</button>
+                            </div>
+                            <div className="col-6 text-right">
                                 <button onClick={e => this.onSubmit(e)} className="btn btn-success">Suchen</button>
                             </div>
                         </div>
