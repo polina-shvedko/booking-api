@@ -5,10 +5,7 @@ import * as axios from "axios";
 
 export default class Form extends React.Component {
 
-    /**
-     *
-     * @type {{ankunft: string, serverResponse: {}, abfahrt: string, error: null, tagAbfahrt: string, isLoaded: boolean}}
-     */
+    //* состояния класса Form 
     state = {
         abfahrt: '',
         ankunft: '',
@@ -18,38 +15,30 @@ export default class Form extends React.Component {
         serverResponse: {}
     };
 
-    /**
-     *
-     */
+    //* 
     preloader: string;
 
-    /**
-     *
-     * @param e
-     */
+    //* Ändern this.state während des Andern  von input Felder
+    //* Verknüpfung mit jedem input Felder
     change = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
     };
 
-    /**
-     *
-     * @param e
-     */
+    //* die Metode, die bei Form Sendung aufgeruft wird
     onSubmit = e => {
+        //* предотвратить выполнения действий по умолчаниюб в нашем случае отправку формы
         e.preventDefault();
         this.preloader = <div className={`preloader show`}>
             <div className={`lightbox`}></div>
             <div className={`spinner`}></div>
         </div>;
+        //* machen einen Anruf zum LH Server um die Inf über die Flügen zu bekommen
         this.sendRequest();
     };
 
-    /**
-     *
-     * @param e
-     */
+    //* die Metode, die bei Form Zurücksetzung aufgeruft wird
     onReset = e => {
         e.preventDefault();
         this.setState({
@@ -62,16 +51,15 @@ export default class Form extends React.Component {
         });
     };
 
-    /**
-     *
-     * @returns {[]}
-     */
+    //* die Metode, die Array mit Städten Information generirt
     static renderList() {
         let cities;
         cities = CitiesList.list;
 
         let result = [];
+        //* shotCut -  die Abkurzung der Stadt
         for (let shotCut in cities) {
+            //* hasOwnProperty - Überprüft, ob ein Schlüßel im Array gibt - есть ли ключ в массиве
             if (cities.hasOwnProperty(shotCut)) {
                 let cityName = cities[shotCut];
                 result.push(<option value={shotCut}>{cityName}</option>);
@@ -82,12 +70,11 @@ export default class Form extends React.Component {
         return result;
     };
 
-    /**
-     *
-     * @param url
-     */
+    //* Anruf zum LH Server um die Inf über die Flügen zu erhalten
     sendRequestFlies(url) {
+        //* ziehen das Token aus localStorage
         let apiKey = localStorage.getItem('keyAPI') || null;
+        //* machen einen GET Anruf 
         axios.get(url, {
             headers: {
                 'Accept': 'application/json',
@@ -95,6 +82,7 @@ export default class Form extends React.Component {
                 'Authorization': 'Bearer ' + apiKey
             }
         }).then((response) => {
+            //* Erneun der Status mit der AntwortDaten
                 this.preloader = '';
                 this.setState({
                     isLoaded: true,
@@ -104,6 +92,7 @@ export default class Form extends React.Component {
             }
         )
             .catch((response) => {
+                //* eieigen Err bezüglich von der ServersAntwort
                 let error = '';
                 if(response.hasOwnProperty('response') && response.response.hasOwnProperty('status')){
                     switch (response.response.status) {
@@ -118,6 +107,7 @@ export default class Form extends React.Component {
                             break;
                     }
                 }
+                 //* Erneun der Status mit der AntwortDaten
                 this.preloader = '';
                 this.setState({
                     isLoaded: false,
@@ -126,20 +116,18 @@ export default class Form extends React.Component {
             });
     }
 
-    /**
-     *
-     */
+    //* Aufruf der Metode mit dem Anruf zum LH Server
     sendRequest() {
+        //* Direct Flüg - 1
+        //* Indirect Flüg - 0 (nicht funktioniert) 
         let isDirect = 1;
+        //* url des Anrufs zum Server
         let url = 'https://api.lufthansa.com/v1/operations/schedules/' + this.state.abfahrt + '/' + this.state.ankunft + '/' + this.state.tagAbfahrt + '?directFlights=' + isDirect;
-
+        //* machen Anruf zum LH Server mit obengenannten url
         this.sendRequestFlies(url);
     }
 
-    /**
-     *
-     * @returns {*}
-     */
+    //* Render Methode - функция рендеринга контента компонента выводит на экран
     render() {
         return (
             <form method="GET">
@@ -192,7 +180,7 @@ export default class Form extends React.Component {
                     </div>
 
                 </div>
-
+{/* Anzeige des Result Companent */}
                 <Result item={this.state.serverResponse}/>
                 {this.preloader}
             </form>
