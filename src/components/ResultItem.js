@@ -4,39 +4,37 @@ import React from 'react';
  *
  */
 export default class ResultItem extends React.Component {
-    /**
-     *
-     * @returns {*}
-     */
+    //* Generiert Reackt specifisch html mit Flug Information
     render() {
-
-        let response = this.props.item;
+//* props - данные из коспонента который тебя вызывал
+        let response = this.props.item; //* ответ от сервера который нам был передан из предыдущего компонента
         let cards = [];
         if (typeof response !== 'undefined' && response !== null) {
-            if (response.hasOwnProperty('ScheduleResource')
+            if (response.hasOwnProperty('ScheduleResource') //* если имеет ответ ключ ScheduleResource
                 && response.ScheduleResource.hasOwnProperty('Schedule')) {
                 let schedules = response.ScheduleResource.Schedule;
 
                 let totalZeit = '';
-                for (let attribute in schedules) {
+                for (let attribute in schedules) { //* скедьюлз расписание
                     if (schedules.hasOwnProperty(attribute)) {
-                        let schedule = schedules[attribute];
+                        let schedule = schedules[attribute]; //* вытягиваем элемент одного расписания
                         if (schedule.hasOwnProperty('TotalJourney')
                             && schedule.TotalJourney.hasOwnProperty('Duration')) {
                             totalZeit = ResultItem.getDurationFormatted(schedule.TotalJourney.Duration);
-                        }
+                        } //* то общее время равно результату нашей функции
 
                         if (schedule.hasOwnProperty('Flight')) {
                             let flug = schedule.Flight;
 
                             let abfahrt = '';
-                            abfahrt = ResultItem.getAbfahrtInfo(flug);
+                            abfahrt = ResultItem.getAbfahrtInfo(flug); //* в функцию передаем объект расписания самолета
+                            //* а функция возвращает строку с датой и временем отправления
 
                             let ankunft = '';
                             ankunft = ResultItem.getAnkunftInfo(flug);
 
                             let flugInfo;
-                            flugInfo = ResultItem.getFlugInfo(flug);
+                            flugInfo = ResultItem.getFlugInfo(flug); //* номер самолета
 
                             let cardHtml =
                                 <div className={`col-12 col-sm-6 col-md-4 p-0`}>
@@ -47,6 +45,7 @@ export default class ResultItem extends React.Component {
                                         </div>
                                         <div className={`col-4 abfahrt`}>
                                             <p className={`mb-0 title`}>Abfahrt</p>
+                                            {/* Вывод в теге хтмл а не строку */}
                                             <p className={`abfahrt`} dangerouslySetInnerHTML={{__html: abfahrt}}></p>
                                         </div>
                                         <div className={`col-4 text-center`}>
@@ -78,11 +77,7 @@ export default class ResultItem extends React.Component {
         );
     }
 
-    /**
-     *
-     * @param flug
-     * @returns {*}
-     */
+    //* Generiert die Abfart Info
     static getAbfahrtInfo(flug) {
         let abfahrt;
         let ergebnis = '';
@@ -101,11 +96,7 @@ export default class ResultItem extends React.Component {
         return ergebnis;
     }
 
-    /**
-     *
-     * @param flug
-     * @returns {*}
-     */
+    //* Generiert die Ankunft Info
     static getAnkunftInfo(flug) {
         let ankunft;
         let ergebnis = '';
@@ -124,11 +115,7 @@ export default class ResultItem extends React.Component {
         return ergebnis;
     }
 
-    /**
-     *
-     * @param flug
-     * @returns {string}
-     */
+    //* Generiert FlügInfo mit Operator Abkürzung und FlügNummer -номер самолета
     static getFlugInfo(flug) {
         let flugInfo = '';
         let ergebnis = '';
@@ -147,11 +134,7 @@ export default class ResultItem extends React.Component {
         return ergebnis;
     }
 
-    /**
-     *
-     * @param duration
-     * @returns {string}
-     */
+    //* machen DauertZeit von Flüg zum Aussicht tag + stunde + minuten
     static getDurationFormatted(duration) {
         let res = '';
 
@@ -185,12 +168,8 @@ export default class ResultItem extends React.Component {
         return res;
     }
 
-    /**
-     *
-     * @param duration
-     * @returns {string}
-     */
-    static getTimeFormatted(duration) {
+    //*Formatieren Zeit von LH Format zum unserem Format
+    static getTimeFormatted(duration) { //* продолжительность
         let zeit = '';
         let zeitBuschtabe = duration.indexOf('T');
 
@@ -201,11 +180,7 @@ export default class ResultItem extends React.Component {
         return zeit;
     }
 
-    /**
-     *
-     * @param duration
-     * @returns {string}
-     */
+    //* Formatieren Datum von LH Format zum unserem Format
     static getDateFormatted(duration) {
         let date = '';
         let zeitBuschtabe = duration.indexOf('T');
